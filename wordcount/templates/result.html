@@ -1,0 +1,58 @@
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext" rel="stylesheet">
+        
+    <style>
+              
+ body {
+text-align: center; 
+} 
+            
+            
+ * {
+background-color: #cf6b6b;
+}
+
+.title {
+                text-align: center;
+                margin-top: 150px;
+                margin-bottom: 80px;
+                font-family: 'Roboto', sans-serif;
+                color: #2c2f30;
+            }
+.tt{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family:'Roboto', sans-serif;
+    color: #2c2f30;
+}
+.submit {
+                font-family:'Roboto', sans-serif;
+                color: #2c2f30;
+                font-size: 15px;
+                text-align: center;
+            }
+</style></head>
+
+<body>
+
+
+    
+    <h1 class="title">당신이 입력한 텍스트는 {{total}}개로 구성되어있습니다.</h1>
+
+
+<h2 class="tt">입력한 텍스트 : </h2>
+{{full}}
+
+<h2 class="tt">단어 카운트 :</h2>
+{% for word, howmany in dictionary%}
+
+{{word}} : {{howmany}}
+<br>
+{%endfor%}
+<br>
+<br>
+<br>
+<a href="{%url 'home'%}" class="submit">다시하기</a>
+<br>
+</body>
